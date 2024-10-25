@@ -34,6 +34,7 @@ const Services = () => {
     <section id="hizmetlerimiz" className="pt-28 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
+          ref={ref}
           className="text-4xl font-bold text-center mb-12 text-gray-800 py-4 w-fit mx-auto px-8 rounded-full shadow-lg bg-gradient-to-r from-slate-50 to-red-200"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
