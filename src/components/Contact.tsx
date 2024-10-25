@@ -28,7 +28,6 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* İletişim Bilgileri */}
           <motion.div
-            ref={ref}
             className="bg-white rounded-lg shadow-lg p-8 flex flex-col justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // 
@@ -36,24 +35,24 @@ const Contact = () => {
           >
             <h3 className="text-2xl font-bold text-gray-800 mb-6">İletişim Bilgileri</h3>
             
-            <div className="mb-4 flex items-center">
-              <FaMapMarkerAlt className="text-red-500 text-xl mr-2" />
+            <div className="mb-4 flex items-center gap-4">
+              <FaMapMarkerAlt className="text-red-500 text-xl" />
               <div>
                 <h4 className="text-lg font-semibold text-gray-800">Adres:</h4>
                 <p className="text-gray-600">{contactDetails.address}</p>
               </div>
             </div>
             
-            <div className="mb-4 flex items-center">
-              <FaPhoneAlt className="text-red-500 text-xl mr-2" />
+            <div className="mb-4 flex items-center gap-4">
+              <FaPhoneAlt className="text-red-500 text-xl" />
               <div>
                 <h4 className="text-lg font-semibold text-gray-800">Telefon:</h4>
                 <p className="text-gray-600">{contactDetails.phone}</p>
               </div>
             </div>
             
-            <div className="mb-4 flex items-center">
-              <FaMobileAlt className="text-red-500 text-xl mr-2" />
+            <div className="mb-4 flex items-center gap-4">
+              <FaMobileAlt className="text-red-500 text-xl" />
               <div>
                 <h4 className="text-lg font-semibold text-gray-800">Cep Telefonu:</h4>
                 <p className="text-gray-600">{contactDetails.mobile}</p>
@@ -63,7 +62,6 @@ const Contact = () => {
 
           {/* Harita */}
           <motion.div
-            ref={ref}
             className="bg-white rounded-lg shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}

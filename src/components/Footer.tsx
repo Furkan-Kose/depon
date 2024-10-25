@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-        <div className="flex flex-col items-start md:flex-row justify-between md:items-start">
+        <div className="flex flex-col items-start md:flex-row md:justify-between">
           {/* Logo ve İsim */}
           <div className="flex flex-col items-start mb-6 md:mb-0">
             <div className='flex items-center'>

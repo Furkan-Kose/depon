@@ -21,7 +21,7 @@ const References = () => {
   const inView = useInView(ref, {once: true});
 
   return (
-    <section id="referanslar" className="pt-28 bg-gray-100">
+    <section ref={ref} id="referanslar" className="pt-28 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2 
             ref={ref}
@@ -35,7 +35,6 @@ const References = () => {
             {/* Dinamik Logo Kartları */}
             {references.map((reference, index) => (
               <motion.div 
-                ref={ref}
                 key={reference.id} 
                 className="flex justify-center items-center bg-gradient-to-b from-white to-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-lg"
                 initial={{ opacity: 0, y: 20 }}

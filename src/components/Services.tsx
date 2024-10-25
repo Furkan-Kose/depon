@@ -31,7 +31,7 @@ const Services = () => {
   const inView = useInView(ref, {once: true})
 
   return (
-    <section id="hizmetlerimiz" className="pt-28 bg-gray-100">
+    <section ref={ref} id="hizmetlerimiz" className="pt-28 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
           ref={ref}
@@ -45,7 +45,6 @@ const Services = () => {
           {/* Dinamik Hizmet Kartları */}
           {services.map((service, index) => (
             <motion.div
-              ref={ref}
               key={service.id}
               className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 text-center transform hover:scale-105"
               initial={{ opacity: 0, y: 20 }}
