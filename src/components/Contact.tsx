@@ -29,9 +29,9 @@ const Contact = () => {
           <motion.div
             ref={ref}
             className="bg-white rounded-lg shadow-lg p-8 flex flex-col justify-center"
-            initial={{ opacity: 0, y: 20 }} // Başlangıç opaklığı ve konumu
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Görünür olduğunda animasyonu başlat
-            transition={{ duration: 0.5 }} // Animasyon süresi
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // 
+            transition={{ duration: 0.5 }}
           >
             <h3 className="text-2xl font-bold text-gray-800 mb-6">İletişim Bilgileri</h3>
             
@@ -64,9 +64,9 @@ const Contact = () => {
           <motion.div
             ref={ref}
             className="bg-white rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: 20 }} // Başlangıç opaklığı ve konumu
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Görünür olduğunda animasyonu başlat
-            transition={{ duration: 0.5 }} // Animasyon süresi
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
           >
             <div className="h-96">
               <iframe

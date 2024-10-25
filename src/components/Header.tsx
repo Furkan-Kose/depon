@@ -18,10 +18,6 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
       }, []);
 
-      const handleLinkClick = () => {
-        setOpen(false);
-      };
-
       const handleMenuToggle = () => {
         if (open) {
           setClosing(true);

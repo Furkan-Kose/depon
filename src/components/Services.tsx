@@ -47,9 +47,9 @@ const Services = () => {
               ref={ref}
               key={service.id}
               className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 text-center transform hover:scale-105"
-              initial={{ opacity: 0, y: 20 }} // Başlangıç opaklığı ve konumu
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Görünür olduğunda animasyonu başlat
-              transition={{ duration: 0.5, delay: index * 0.2 }} // Animasyon süresi ve gecikmesi
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <div className="bg-gradient-to-r from-red-500 to-gray-900 text-white w-16 h-16 flex items-center justify-center rounded-full mx-auto mb-6">
                 <service.icon size={32} className="text-white" />
