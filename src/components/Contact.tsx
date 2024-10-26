@@ -11,61 +11,72 @@ const contactDetails = {
 };
 
 const Contact = () => {
+  const titleRef = useRef(null);
   const ref = useRef(null);
+  const titleInView = useInView(titleRef, {once: true});
   const inView = useInView(ref, {once: true});
 
   return (
     <section id="iletisim" className="py-28 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          ref={ref}
+          ref={titleRef}
           className="text-4xl font-bold text-center text-gray-800 mb-12 py-4 w-fit mx-auto px-8 rounded-full shadow-lg bg-gradient-to-r from-slate-50 to-red-200"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }} 
+          initial={{ opacity: 0, y: 40 }}
+          animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.8 }} 
         >İletişim</motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* İletişim Bilgileri */}
           <motion.div
+            ref={ref}
             className="bg-white rounded-lg shadow-lg p-8 flex flex-col justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // 
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }} 
+            transition={{ duration: 0.8 }}
           >
             <h3 className="text-2xl font-bold text-gray-800 mb-6">İletişim Bilgileri</h3>
-            
-            <div className="mb-4 flex items-center gap-4">
-              <FaMapMarkerAlt className="text-red-500 text-xl" />
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800">Adres:</h4>
-                <p className="text-gray-600">{contactDetails.address}</p>
-              </div>
+
+          <div className="mb-4 flex items-start gap-4 w-full">
+            <div className="flex items-center justify-center w-8 h-8 flex-shrink-0">
+              <FaMapMarkerAlt className="text-red-500 w-6 h-6" />
             </div>
-            
-            <div className="mb-4 flex items-center gap-4">
-              <FaPhoneAlt className="text-red-500 text-xl" />
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800">Telefon:</h4>
-                <p className="text-gray-600">{contactDetails.phone}</p>
-              </div>
+            <div className="flex-1">
+              <h4 className="text-lg font-semibold text-gray-800">Adres:</h4>
+              <p className="text-gray-600">{contactDetails.address}</p>
             </div>
-            
-            <div className="mb-4 flex items-center gap-4">
-              <FaMobileAlt className="text-red-500 text-xl" />
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800">Cep Telefonu:</h4>
-                <p className="text-gray-600">{contactDetails.mobile}</p>
-              </div>
+          </div>
+
+          <div className="mb-4 flex items-start gap-4 w-full">
+            <div className="flex items-center justify-center w-8 h-8 flex-shrink-0">
+              <FaPhoneAlt className="text-red-500 w-6 h-6" />
             </div>
+            <div>
+              <h4 className="text-lg font-semibold text-gray-800">Telefon:</h4>
+              <p className="text-gray-600">{contactDetails.phone}</p>
+            </div>
+          </div>
+
+          <div className="mb-4 flex items-start gap-4 w-full">
+            <div className="flex items-center justify-center w-8 h-8 flex-shrink-0">
+              <FaMobileAlt className="text-red-500 w-6 h-6" />
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-gray-800">Cep Telefonu:</h4>
+              <p className="text-gray-600">{contactDetails.mobile}</p>
+            </div>
+          </div>
+
+
           </motion.div>
 
           {/* Harita */}
           <motion.div
             className="bg-white rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="h-96">
               <iframe
