@@ -37,7 +37,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
           ref={titleRef}
-          className="text-4xl font-bold text-center mb-12 text-gray-800 py-4 w-fit mx-auto px-8 rounded-full shadow-lg bg-gradient-to-r from-slate-50 to-red-200"
+          className="text-4xl font-semibold text-center mb-12 text-gray-800"
           initial={{ opacity: 0, y: 40 }}
           animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.8 }} 

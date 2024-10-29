@@ -12,7 +12,7 @@ const Hero = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: 'easeOut' }}
       >
-        <h1 className="text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-red-500 w-fit">
+        <h1 className="text-6xl font-bold text-black">
           Depon
         </h1>
         <p className="text-lg text-gray-700 leading-relaxed">
